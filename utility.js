@@ -11,7 +11,7 @@ export async function getJson(url) {
     response = await fetch(url)
   } catch (error) {
     console.error("Failed communicating with server!")
-    setTimeout(updateWeatherData, 5000)
+    setTimeout(() => getJson(url), 20 * 1000) // Timeout is in Milliseconds
   }
 
   // Hva skal skje viss serveren gir en feilmelding?
