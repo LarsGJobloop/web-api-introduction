@@ -15,6 +15,10 @@ async function updateWeatherData() {
 
 updateWeatherData()
 
-const movieUrl = "https://ghibliapi.vercel.app/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49"
+// If you don't specify a protocol and domain
+// fetch will ask the server for that file
+// Ie here "data/films.json" will become
+// "http://127.0.0.1:5500/data/films.json"
+const movieUrl = "films.json"
 const movieData = await getJson(movieUrl)
 console.log(movieData)
